@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grocery-store</title>
+    <script>
+        // JavaScript function to toggle visibility of more options
+        function toggleMoreOptions() {
+            var moreOptionsDropdown = document.getElementById("more-options-dropdown");
+            moreOptionsDropdown.style.display = moreOptionsDropdown.style.display === "none" ? "block" : "none";
+        }
+    </script>
+    <style>
+        h2 {
+            align-items: center;
+        }
+
+        /* Styles for navbar */
+        .navbar {
+            background-color: silver;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            margin-right: auto;
+            width: 150px;
+        }
+
+        .search-bar {
+            border: 1px solid black;
+            width: 30%;
+            padding: 5px;
+            border-radius: 15px;
+            background: none;
+            margin-right: 20px;
+            height: 25px;
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            text-align: center;
+            outline: none;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            margin-bottom: 0px;
+            /* Height of the footer */
+            background-color: silver;
+            text-align: center;
+            align-content: center;
+            line-height: 20px;
+        }
+
+        .more-options {
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        .more-options-dropdown {
+            position: absolute;
+            top: 10%;
+            right: 0;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .more-options-dropdown p a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .body {
+            width: 100%;
+            height: 1000px;
+            display: flex;
+        }
+
+        .body h1 {
+            text-align: center;
+
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            margin-left: 40PX;
+            display: block;
+            width: 270px;
+            height: 150px;
+            padding: 10px;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            justify-content: space-between;
+        }
+
+        .box h3 {
+            margin-top: 0;
+        }
+
+        .box-container1 {
+            display: flex;
+
+
+        }
+
+        #box1 {
+            width: 40%;
+            display: flex;
+            text-align: center;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        #box1 a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+
+        }
+
+        .main {
+
+            margin: 2%;
+        }
+
+        .card {
+            width: 20%;
+            display: inline-block;
+            box-shadow: 2px 2px 20px black;
+            border-radius: 5px;
+            margin: 2%;
+           
+        }
+
+        .image img {
+            width: 100%;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .title {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        h2 ,h1{
+            font-family: 'Alkatra', cursive;
+            text-align: center;
+        }
+
+        .des {
+            padding: 3px;
+            text-align: center;
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="search.png" alt="Logo" width="100" height="40">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="more-options" onclick="toggleMoreOptions()">
+                <img src="more.png" alt="More Options" width="30" height="30">
+            </div>
+            <div id="more-options-dropdown" class="more-options-dropdown">
+                <!-- More options content... -->
+                <p><a href="contact.html">Contact us</a></p>
+                <p><a href="registration.php">logout</a></p>
+            </div>
+        </div>
+    </nav>
+    <h2>Grocery-Stores in your city:</h2>
+    <div class="main">
+
+        <!--cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img
+                    src="g1.jpg">
+            </div>
+            <div class="title">
+                <h1><a href="javed.html">Javed Kirana</a></h1>
+            </div>
+            <div class="des">
+                <p>Add:Darga Road,Parbhani <br>Mo.No.8788856521</p>
+                
+                <button><a href="https://goo.gl/maps/XWCr1GWad7T7y5wa6">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+
+
+        <div class="card">
+
+            <div class="image">
+                <img src="g2.jpg">
+            </div>
+            <div class="title">
+                <h1><a href="arokya.html">Arokya Milk </a></h1>
+            </div>
+            <div class="des">
+                <p>Add:Vidya Nagar,Parbhani<br>Mo.No.8788856521</p>
+                <button><a href="https://goo.gl/maps/XWCr1GWad7T7y5wa6">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+        <div class="card">
+
+            <div class="image">
+                <img  src="g3.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    <a href="aakar.html">Aakar Shoppe</a></h1>
+            </div>
+            <div class="des">
+                <p>Add:Basmat Road,Parbhani <br>Mo.No.8546264636</p>
+                <button><a href="https://goo.gl/maps/qMGUiVek4Ewbu5XXA">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img src="g4.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    <a href="pravin.html">Pravin Kirana</a></h1>
+            </div>
+            <div class="des">
+                <p>Post Colony,parbhani <br> Mo.No.9387164323</p>
+                <button><a href="https://goo.gl/maps/JhEvFgL28bFdwbFk8">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img src="g5.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    WS Mart</h1>
+            </div>
+            <div class="des">
+                <p>Gavhane Road,Parbhani <br> Mo.No.7662929333</p>
+                <button><a href="https://goo.gl/maps/Xhw4BXQADYjgYJwBA">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img
+                    src="g6.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    Md Javed Shop</h1>
+            </div>
+            <div class="des">
+                <p>Darga Road-Parbhani <br>Mo.No.7863215552 </p>
+                <button><a href="https://goo.gl/maps/3qQ4doSxneqYhD5L6">Location</a></button>
+
+            </div>
+        </div>
+        <!--cards -->
+
+
+        <div class="card">
+
+            <div class="image">
+                <img src="g7.jpeg">
+            </div>
+            <div class="title">
+                <h1>
+                     Mannan Kirana</h1>
+            </div>
+            <div class="des">
+                <p>Dr Zakir Hussain Nagar, parbhani <br>Mo.No.9825814736</p>
+                <button><a href="https://goo.gl/maps/Y2uXmaxeu46RRgQT9">Location</a></button>
+            </div>
+        </div>
+        <!--cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img
+                    src="g1.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    Shafi Kirana</h1>
+            </div>
+            <div class="des">
+                <p>Dhar Road, Parbhani <br>Mo.No.7894561236</p>
+                <button><a href="https://goo.gl/maps/um1QDgH9eUYZZDy36">Location</a></button>
+
+            </div>
+        </div>
+        <!--cards -->
+
+
+        
+    </div>
+    </div>
+
+    <footer class="footer">
+        <p>STORE-FINDER</p>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
